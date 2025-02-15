@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="Cicket-css.css">
+</head>
+
+<body>
+  <h1 class="game-name">Bat Ball Stamp Game</h1>
+  <button onclick="
+    let computerSelect= generateRandom();
+    let result=checkResult('Bat', computerSelect);
+    display('Bat', computerSelect, result)
+    " class="btn-select">
+    <img src="img/bat.png" alt="select bat" class="select-img">
+  </button>
+
+  <!-- Ball -->
+  <button onclick="
+      computerSelect= generateRandom();
+      result=checkResult('Ball', computerSelect);
+      display('Ball', computerSelect, result)  " class="btn-select">
+    <img src="img/ball.png" alt="select ball" class="select-img">
+  </button>
+
+  <!-- Stamp -->
+      <button onclick="
+      computerSelect= generateRandom();
+      result=checkResult('Stamp', computerSelect);
+      display('Stamp', computerSelect, result)  " class="btn-select">
+    <img src="img/stump.png" alt="select stamp" class="select-img">
+  </button>
+
+    <br>
+    <h2 id="user-select"></h2>
+    <h2 id="computer-select"></h2>
+    <h2 id="result"></h2>
+    <h3 id="score"></h3>
+    <br>
+
+  <button onclick="resetScore();" class="btn-clear">
+  <img src="img/refresh.png" alt="Restart Game" class="select-img">
+  </button>
+
+
+    
+
+  <script src="Cricket-js.js"></script>
+</body>
+
+</html>

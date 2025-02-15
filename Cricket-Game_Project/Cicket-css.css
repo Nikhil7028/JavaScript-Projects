@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-color: aquamarine;
+}
+.game-name{
+  background-color: blueviolet;
+  color: white;
+}
+.select-img{
+  height: 75px;
+}
+.btn-select{
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(125, 199, 55);
+  cursor: pointer;
+}
+
+.btn-clear{
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.btn-clear:hover{
+  background-color: rgb(122, 101, 214);
+}
+
+.btn-select:hover{
+  background-color: rgb(93, 238, 100);
+}
