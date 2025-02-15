@@ -5,44 +5,159 @@
 
   <title>Cricket Game</title>
   <link rel="stylesheet" href="Cicket-css.css">
+  <!-- <style>
+    .rules-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007BFF;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        ul {
+            text-align: left;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #0056b3;
+        }
+  </style> -->
 </head>
 
 <body>
-  <h1 class="game-name">Bat Ball Stamp Game</h1>
-  <button onclick="
-    let computerSelect= generateRandom();
-    let result=checkResult('Bat', computerSelect);
-    display('Bat', computerSelect, result)
-    " class="btn-select">
-    <img src="img/bat.png" alt="select bat" class="select-img">
-  </button>
+  <div class="game-box">
+    
+    <h1 class="game-name">Bat Ball Stamp Game</h1>
+    <button onclick="
+      let computerSelect= generateRandom();
+      let result=checkResult('Bat', computerSelect);
+      display('Bat', computerSelect, result)
+      " class="btn-select">
+      <img src="img/bat.png" alt="select bat" class="select-img">
+    </button>
 
-  <!-- Ball -->
-  <button onclick="
-      computerSelect= generateRandom();
-      result=checkResult('Ball', computerSelect);
-      display('Ball', computerSelect, result)  " class="btn-select">
-    <img src="img/ball.png" alt="select ball" class="select-img">
-  </button>
+    <!-- Ball -->
+    <button onclick="
+        computerSelect= generateRandom();
+        result=checkResult('Ball', computerSelect);
+        display('Ball', computerSelect, result)  " class="btn-select">
+      <img src="img/ball.png" alt="select ball" class="select-img">
+    </button>
 
-  <!-- Stamp -->
-      <button onclick="
-      computerSelect= generateRandom();
-      result=checkResult('Stamp', computerSelect);
-      display('Stamp', computerSelect, result)  " class="btn-select">
-    <img src="img/stump.png" alt="select stamp" class="select-img">
-  </button>
+    <!-- Stamp -->
+        <button onclick="
+        computerSelect= generateRandom();
+        result=checkResult('Stamp', computerSelect);
+        display('Stamp', computerSelect, result)  " class="btn-select">
+      <img src="img/stump.png" alt="select stamp" class="select-img">
+    </button>
 
-    <br>
-    <h2 id="user-select"></h2>
-    <h2 id="computer-select"></h2>
-    <h2 id="result"></h2>
-    <h3 id="score"></h3>
-    <br>
+      <br>
+      <h2 id="user-select"></h2>
+      <h2 id="computer-select"></h2>
+      <h2 id="result"></h2>
+      <h3 id="score"></h3>
+      <br>
 
-  <button onclick="resetScore();" class="btn-clear">
-  <img src="img/refresh.png" alt="Restart Game" class="select-img">
-  </button>
+    <button onclick="resetScore();" class="btn-clear">
+    <img src="img/refresh.png" alt="Restart Game" class="select-img">
+    </button>
+  
+  </div>
+
+  <br><br><br>
+
+  <div class="rules-container">
+    <h1>Bat Ball Stump Game - Rules 🏏</h1>
+
+    <h2>1️⃣ How to Play</h2>
+    <ul>
+        <li>The game is played between the   User (Player 1)   and the   Computer (Player 2)  .</li>
+        <li>Both players select one option: <b>Bat 🏏, Ball 🏐, or Stump 🏏.</b></li>
+        <li>The computer's choice is random.</li>
+        <li>The winner is determined based on the rules below.</li>
+    </ul>
+
+    <h2>2️⃣ Winning Rules</h2>
+    <table border="">
+        <tr>
+            <th>User (Player 1) Chooses</th>
+            <th>Computer (Player 2) Chooses</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>Bat 🏏</td>
+            <td>Ball 🏐</td>
+            <td><b>User Wins 🎉</b> (Bat hits Ball)</td>
+        </tr>
+        <tr>
+            <td>Ball 🏐</td>
+            <td>Stump 🏏</td>
+            <td><b>User Wins 🎉</b> (Ball knocks down Stump)</td>
+        </tr>
+        <tr>
+            <td>Stump 🏏</td>
+            <td>Bat 🏏</td>
+            <td><b>User Wins 🎉</b> (Stump stops Bat)</td>
+        </tr>
+        <tr>
+            <td>Bat 🏏</td>
+            <td>Stump 🏏</td>
+            <td><b>Computer Wins 😢</b> (Stump stops Bat)</td>
+        </tr>
+        <tr>
+            <td>Stump 🏏</td>
+            <td>Ball 🏐</td>
+            <td><b>Computer Wins 😢</b> (Ball knocks down Stump)</td>
+        </tr>
+        <tr>
+            <td>Ball 🏐</td>
+            <td>Bat 🏏</td>
+            <td><b>Computer Wins 😢</b> (Bat hits Ball)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Same Choice</b></td>
+            <td><b>Tie 🤝</b></td>
+        </tr>
+    </table>
+
+</div>
+
+
+  
 
 
     

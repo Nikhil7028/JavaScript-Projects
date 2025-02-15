@@ -1,6 +1,8 @@
 body {
-  text-align: center;
   background-color: aquamarine;
+}
+.game-box{
+  text-align: center;
 }
 .game-name{
   background-color: blueviolet;

@@ -1,6 +1,14 @@
+
+body{
+  background-color: rgb(178, 208, 235);
+  
+  margin-left: 550px;
+
+}
 .outer{
   border: 1px solid rgb(53, 34, 34);
   width: 220px;
+  
 }
 
 .inputs{
